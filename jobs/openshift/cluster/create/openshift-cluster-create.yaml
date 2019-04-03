@@ -1,7 +1,7 @@
 ---
 - job:
-    name: openshift-cluster-create
-    display-name: 'OpenShift Cluster Create'
+    name: leo-openshift-cluster-create
+    display-name: '[LEO] OpenShift Cluster Create'
     project-type: pipeline
     parameters:
       - string:
@@ -50,7 +50,9 @@
       scm:
         - git:
             branches:
-              - 'master'
-            url: 'https://github.com/integr8ly/ci-cd.git'
+              #- 'master'
+              - 'test'
+            #url: 'https://github.com/integr8ly/ci-cd.git'
+            url: 'https://github.com/odra/ci-cd.git'
             skip-tag: true
             wipe-workspace: false
